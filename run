@@ -1,0 +1,15 @@
+#!/bin/bash
+
+service mysql start
+
+mysql_secure_installation
+
+service redis-server start
+
+sh kafka/bin/zookeeper-server-start.sh -daemon kafka/config/zookeeper.properties
+
+echo zookeeper start
+
+sh kafka/bin/kafka-server-start.sh -daemon kafka/config/server.properties
+
+echo kafka start

@@ -1,0 +1,13 @@
+#!/bin/bash
+
+apt-get install -y openjdk-8-jdk
+
+apt install -y mysql-server
+
+apt-get install -y redis-server
+
+wget https://mirror.navercorp.com/apache/kafka/2.8.0/kafka_2.13-2.8.0.tgz
+
+tar xvf kafka_2.13-2.8.0.tgz
+
+mv kafka_2.13-2.8.0/ kafka
