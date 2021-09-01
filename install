@@ -1,6 +1,6 @@
 #!/bin/bash
 
-apt-get install -y openjdk-8-jdk
+apt-get install -y openjdk-11-jdk
 
 apt install -y mysql-server
 
@@ -11,3 +11,9 @@ wget https://mirror.navercorp.com/apache/kafka/2.8.0/kafka_2.13-2.8.0.tgz
 tar xvf kafka_2.13-2.8.0.tgz
 
 mv kafka_2.13-2.8.0/ kafka
+
+wget https://github.com/yahoo/CMAK/releases/download/3.0.0.5/cmak-3.0.0.5.zip
+
+unzip cmak-3.0.0.5.zip
+
+mv cmak-3.0.0.5 cmak

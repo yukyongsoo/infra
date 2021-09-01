@@ -10,6 +10,10 @@ RUN apt-get update && apt-get install -y vim
 
 RUN apt-get update && apt-get install -y wget
 
+RUN apt-get update && apt-get install -y zip
+
+RUN apt-get update && apt-get install -y curl
+
 COPY install /home/
 
 COPY run /home/
@@ -23,3 +27,4 @@ WORKDIR /home
 EXPOSE 6379
 EXPOSE 3306
 EXPOSE 9092
+EXPOSE 9000
