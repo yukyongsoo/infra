@@ -1,0 +1,5 @@
+-- 윈도우에서 실행시 
+
+wsl -d docker-desktop
+
+sysctl -w vm.max_map_count=262144

@@ -17,3 +17,21 @@ wget https://github.com/yahoo/CMAK/releases/download/3.0.0.5/cmak-3.0.0.5.zip
 unzip cmak-3.0.0.5.zip
 
 mv cmak-3.0.0.5 cmak
+
+curl -fsSL https://artifacts.elastic.co/GPG-KEY-elasticsearch | apt-key add -
+
+echo "deb https://artifacts.elastic.co/packages/7.x/apt stable main" | tee -a /etc/apt/sources.list.d/elastic-7.x.list
+
+apt update
+
+apt install -y elasticsearch
+
+apt install -y kibana
+
+wget -qO - https://www.mongodb.org/static/pgp/server-5.0.asc | apt-key add -
+
+echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/5.0 multiverse" | tee /etc/apt/sources.list.d/mongodb-org-5.0.list
+
+sudo apt-get update
+
+sudo apt-get install -y mongodb-org

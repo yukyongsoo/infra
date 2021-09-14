@@ -17,3 +17,9 @@ echo kafka start
 nohup cmak/bin/cmak &
 
 echo kafka-manager start
+
+service elasticsearch start
+
+service kibana start
+
+systemctl start mongod

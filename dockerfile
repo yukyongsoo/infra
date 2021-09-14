@@ -14,6 +14,9 @@ RUN apt-get update && apt-get install -y zip
 
 RUN apt-get update && apt-get install -y curl
 
+RUN apt-get update && apt-get install -y gnupg2
+
+
 COPY install /home/
 
 COPY run /home/
@@ -28,3 +31,6 @@ EXPOSE 6379
 EXPOSE 3306
 EXPOSE 9092
 EXPOSE 9000
+EXPOSE 9200
+EXPOSE 5601
+EXPOSE 27017
